@@ -12,7 +12,7 @@ dotenv.config();
 
 app.get("/", (req, res) => {
   res.json({
-    message: "API para CRUD Walisson: https://github.com/Murynga/11-API-Introducao",
+    message: "API para CRUD usuario: https://github.com/Murynga/11-API-Introducao",
   });
 });
 
