@@ -1,6 +1,8 @@
 import { Router } from "express";
 import { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario, updateUsuario } from "../db/index.js";
 
+const router = Router();
+
 router.get("/usuarios", async (req, res) => {
     console.log("Rota GET/usuarios solicitada");
     try {
@@ -58,8 +60,6 @@ try {
     res.status(error.status || 500).json({ message: error.message || "Erro!" });
 }
 });
-
-const router = Router();
 
 router.get("/usuario", async (req, res) => {
   console.log(`Rota GET /usuarios solicitada pelo usuario ${req.userId}`);
